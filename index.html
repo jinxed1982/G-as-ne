@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Rush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-ui">
+        <span>💎 Diamonds: <span id="score">0</span></span>
+        <span>❤️ Lives: 3</span>
+    </div>
+    <div id="game-container"></div>
+    <div id="controls">
+        <button onclick="move(0, -1)">UP</button><br>
+        <button onclick="move(-1, 0)">LEFT</button>
+        <button onclick="move(1, 0)">RIGHT</button><br>
+        <button onclick="move(0, 1)">DOWN</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
