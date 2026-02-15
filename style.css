@@ -1,34 +1,71 @@
 body {
-    background: #222;
-    color: white;
-    font-family: sans-serif;
+    background: #121212;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    touch-action: none;
+    overflow: hidden;
+    user-select: none;
 }
 
-#game-ui { margin: 20px; font-size: 24px; }
+#ui {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#reset-btn {
+    background: #d9534f;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 #game-container {
     display: grid;
-    grid-template-columns: repeat(10, 40px);
-    grid-template-rows: repeat(10, 40px);
+    grid-template-columns: repeat(10, 35px);
+    grid-template-rows: repeat(10, 35px);
     gap: 1px;
-    background: #444;
-    border: 4px solid #000;
+    background: #333;
+    border: 4px solid #444;
 }
 
 .tile {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    background: #333;
+    background: #222;
 }
 
 .wall { background: #555; }
 
-#controls { margin-top: 20px; text-align: center; }
-button { padding: 10px 20px; font-size: 18px; margin: 5px; cursor: pointer; }
+#controls { margin-top: 25px; }
+.row { display: flex; justify-content: center; }
+
+button.dir {
+    width: 80px;
+    height: 70px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #3a3a3a;
+    color: white;
+    border: 2px solid #555;
+    border-radius: 12px;
+    touch-action: manipulation;
+}
+
+button.dir:active { background: #555; transform: scale(0.95); }
