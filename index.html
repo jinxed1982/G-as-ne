@@ -2,22 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emoji Rush</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Emoji Rush: Otter Escape</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-ui">
-        <span>💎 Diamonds: <span id="score">0</span></span>
-        <span>❤️ Lives: 3</span>
+    <div id="ui">
+        <div>LVL: <span id="lvl">1</span></div>
+        <div>💎: <span id="score">0</span></div>
+        <button id="reset-btn" onclick="restartLevel()">RESTART</button>
     </div>
+    
     <div id="game-container"></div>
+
     <div id="controls">
-        <button onclick="move(0, -1)">UP</button><br>
-        <button onclick="move(-1, 0)">LEFT</button>
-        <button onclick="move(1, 0)">RIGHT</button><br>
-        <button onclick="move(0, 1)">DOWN</button>
+        <div class="row"><button class="dir" onclick="move(0,-1)">UP</button></div>
+        <div class="row">
+            <button class="dir" onclick="move(-1,0)">LEFT</button>
+            <button class="dir" onclick="move(0,1)">DOWN</button>
+            <button class="dir" onclick="move(1,0)">RIGHT</button>
+        </div>
     </div>
+
     <script src="game.js"></script>
 </body>
 </html>
